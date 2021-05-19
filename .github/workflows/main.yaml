@@ -5,7 +5,8 @@ name: Deploy hello world Logic App
 on:
  push:
    branches:
-     - master
+     #- master
+     - disabled
 
 jobs:
   validate-and-deploy:
