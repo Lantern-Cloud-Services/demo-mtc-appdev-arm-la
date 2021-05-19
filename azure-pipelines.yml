@@ -14,8 +14,8 @@ steps:
       resourceGroupName: 'demo-mtc-appdev-arm-rg1'
       location: 'West US'
       templateLocation: 'URL of the file'
-      csmFileLink: 'github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/template.json'
-      csmParametersFileLink: 'github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/parameters.json'
+      csmFileLink: 'template.json'
+      csmParametersFileLink: 'parameters.json'
       deploymentMode: 'Complete'
 
 #  - task: AzureResourceManagerTemplateDeployment@3
