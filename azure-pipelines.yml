@@ -16,4 +16,7 @@ steps:
       templateLocation: 'Linked artifact'
       csmFile: 'https://github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/template.json'
       csmParametersFile: 'https://github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/parameters.json'
-      deploymentMode: 'Incremental'
+      deploymentMode: 'Complete'
+  
+
+
