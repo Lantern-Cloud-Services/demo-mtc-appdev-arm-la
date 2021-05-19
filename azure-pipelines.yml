@@ -13,10 +13,22 @@ steps:
       action: 'Create Or Update Resource Group'
       resourceGroupName: 'demo-mtc-appdev-arm-rg1'
       location: 'West US'
-      templateLocation: 'Linked artifact'
-      csmFile: 'https://github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/template.json'
-      csmParametersFile: 'https://github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/parameters.json'
+      templateLocation: 'URL of the file'
+      csmFileLink: 'https://github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/template.json'
+      csmParametersFileLink: 'https://github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/parameters.json'
       deploymentMode: 'Complete'
-  
+
+#  - task: AzureResourceManagerTemplateDeployment@3
+#    inputs:
+#      deploymentScope: 'Resource Group'
+#      azureResourceManagerConnection: 'MTC Denver Sandbox(b0e04a4a-a321-4b66-b8fd-13715262ba3c)'
+#      subscriptionId: 'b0e04a4a-a321-4b66-b8fd-13715262ba3c'
+#      action: 'Create Or Update Resource Group'
+#      resourceGroupName: 'demo-mtc-appdev-arm-rg1'
+#      location: 'Australia Central 2'
+#      templateLocation: 'URL of the file'
+#      csmFileLink: 'https://github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/template.json'
+#      csmParametersFileLink: 'https://github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/parameters.json'
+#      deploymentMode: 'Incremental'
 
 
