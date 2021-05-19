@@ -13,7 +13,6 @@ steps:
       action: 'Create Or Update Resource Group'
       resourceGroupName: 'demo-mtc-appdev-arm-rg1'
       location: 'West US'
-      templateLocation: 'URL of the file'
+      templateLocation: 'Linked artifact'
       csmFileLink: 'https://github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/template.json'
-      csmParametersFileLink: 'https://github.com/Lantern-Cloud-Services/demo-mtc-appdev-arm-la/blob/master/parameters.json'
-      deploymentMode: 'Incremental'
+      csmParametersFileLink: '- task: AzureResourceManagerTemplateDeployment@3 
