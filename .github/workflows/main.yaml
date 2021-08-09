@@ -11,7 +11,7 @@ jobs:
   validate-and-deploy:
    runs-on: ubuntu-latest
    env:
-     ENV_RESOURCEGROUP: demo-mtc-appdev-arm-rg1
+     ENV_RESOURCEGROUP: demo-mtc-appdev-ghasp-rg1
      ENV_RESOURCEGROUPLOCATION: westus
 
    steps:
