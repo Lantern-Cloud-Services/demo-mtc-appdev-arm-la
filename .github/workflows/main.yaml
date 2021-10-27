@@ -5,7 +5,7 @@ name: Deploy hello world Logic App
 on:
  workflow_dispatch:
  #push:
-   tags: v1.0.1
+   tags: release/v1.0.1
 
 jobs:
   validate-and-deploy:
