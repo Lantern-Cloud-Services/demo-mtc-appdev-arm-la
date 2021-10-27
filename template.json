@@ -39,7 +39,7 @@
                             "type": "Response",
                             "kind": "Http",
                             "inputs": {
-                                "body": "Hello World 10/26 release branch",
+                                "body": "Hello World 10/27 release branch",
                                 "statusCode": 200
                             }
                         }
