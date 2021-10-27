@@ -3,11 +3,11 @@ name: Deploy hello world Logic App
 
 #Set the action on which the workflow will trigger
 on:
- workflow_dispatch:
- tags: v1.0.1
-# push:
-#   branches:
-#     - master
+ #workflow_dispatch:
+ push:
+   tags: v1.0.1
+   branches:
+     - master
 
 jobs:
   validate-and-deploy:
