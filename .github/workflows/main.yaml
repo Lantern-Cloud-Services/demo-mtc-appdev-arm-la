@@ -9,7 +9,6 @@ on:
  #    - v1.0.1
    branches:
      - master
-
 jobs:
   validate-and-deploy:
    runs-on: ubuntu-latest
