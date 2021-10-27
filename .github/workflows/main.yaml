@@ -7,8 +7,8 @@ on:
  push:
    tags: 
      - v1.0.1
-   branches:
-     - master
+#   branches:
+#     - master
 
 jobs:
   validate-and-deploy:
