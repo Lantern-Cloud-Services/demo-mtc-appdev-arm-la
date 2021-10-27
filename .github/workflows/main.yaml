@@ -5,8 +5,10 @@ name: Deploy hello world Logic App
 on:
  workflow_dispatch:
  #push:
-   tags: release/v1.0.1
-
+ #  tags: 
+ #    - v1.0.1
+   branches:
+     - master
 jobs:
   validate-and-deploy:
    runs-on: ubuntu-latest
