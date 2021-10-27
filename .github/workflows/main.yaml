@@ -6,9 +6,9 @@ on:
  workflow_dispatch:
  #push:
  #  tags: 
-     - v1.0.1
-#   branches:
-#     - master
+ #    - v1.0.1
+   branches:
+     - master
 
 jobs:
   validate-and-deploy:
