@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "workflows_demo_mtc_appdev_arm_la1_name": {
-            "value": "demo-mtc-appdev-arm-laChristie"
+            "value": "demo-mtc-appdev-arm-la"
         }
     }
 }
