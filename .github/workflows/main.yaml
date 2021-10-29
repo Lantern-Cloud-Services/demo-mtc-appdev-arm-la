@@ -10,7 +10,10 @@ on:
    branches:
      - master
 jobs:
+  # Composite action
   hello_world_job:
+    environment:
+     name: dev
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
