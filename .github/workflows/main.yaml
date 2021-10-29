@@ -11,8 +11,8 @@ on:
      - master
 jobs:
   validate-and-deploy:
-   #runs-on: ubuntu-latest
-   runs-on: self-hosted
+   runs-on: ubuntu-latest
+   #runs-on: self-hosted
    env:
      ENV_RESOURCEGROUP: demo-mtc-appdev-ghasp-rg1
      ENV_RESOURCEGROUPLOCATION: westus
