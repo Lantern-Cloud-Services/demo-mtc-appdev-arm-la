@@ -28,8 +28,8 @@ jobs:
   
   
   validate-and-deploy:
-   runs-on: ubuntu-latest
-   #runs-on: self-hosted
+   #runs-on: ubuntu-latest
+   runs-on: self-hosted
    env:
      ENV_RESOURCEGROUP: demo-mtc-appdev-ghDemo-rg2
      ENV_RESOURCEGROUPLOCATION: westus
@@ -46,36 +46,37 @@ jobs:
       with:
           creds: ${{secrets.GHDEMOLOGIN}}
     
-    - name: deployment-what-if
-      uses: Azure/deployment-what-if-action@v1.0.0
-      with:
+#    - name: deployment-what-if
+#      uses: Azure/deployment-what-if-action@v1.0.0
+#      with:
         # Subscription ID
-        subscription: 'jcookAIA'
+#        subscription: 'jcookAIA'
         # Resource group name
-        resourceGroup: ${{env.ENV_RESOURCEGROUP}}
+ #       resourceGroup: ${{env.ENV_RESOURCEGROUP}}
         # ARM template or Bicep file
-        templateFile: ./template.json
+ #       templateFile: ./template.json
         # Parameters file for the ARM template or Bicep
-        parametersFile:  ./parameters.json
+ #       parametersFile:  ./parameters.json
         # Additional parameters to be applied on the ARM template or Bicep. Multiple parameters should be separated by spaces.
         # additionalParameters: # optional
 
     # Create the resource group
-#    - name: Create Resource Group
-#      run: az group create -n ${{env.ENV_RESOURCEGROUP}} -l ${{env.ENV_RESOURCEGROUPLOCATION}}
+    - name: Create Resource Group
+      run: az group create -n ${{env.ENV_RESOURCEGROUP}} -l ${{env.ENV_RESOURCEGROUPLOCATION}}
 
     #Validate the  ARM template
-#    - name: Validate ARM template
-#      run: |
-#        az deployment group validate -g ${{env.ENV_RESOURCEGROUP}} --mode Incremental --template-file ./template.json --parameters ./parameters.json
+    - name: Validate ARM template
+      run: |
+        az deployment group validate -g ${{env.ENV_RESOURCEGROUP}} --mode Incremental --template-file ./template.json --parameters ./parameters.json
    
 
     #Deploy the ARM Template
-#    - name: Deploy Logic App
-#      run: |
-#       az group deployment create -g ${{env.ENV_RESOURCEGROUP}} --template-file ./template.json --parameters ./parameters.json
-#      shell: bash   
+    - name: Deploy Logic App
+      run: |
+       az group deployment create -g ${{env.ENV_RESOURCEGROUP}} --template-file ./template.json --parameters ./parameters.json
+      shell: bash   
       
     # Log Out From Azure 
-#    - name: Logout
-#      run: az logout
+    - name: Logout
+      run: az logout
+      
